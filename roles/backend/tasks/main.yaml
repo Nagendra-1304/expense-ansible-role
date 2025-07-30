@@ -41,7 +41,7 @@
 
     - name: copy backend service #copy only works for files without variables
       ansible.builtin.template:
-        src: backend.service
+        src: backend.service.j2
         dest: /etc/systemd/system/backend
 
     - name: install pymysql
