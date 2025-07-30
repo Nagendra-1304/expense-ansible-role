@@ -32,9 +32,9 @@
       remote_src: yes          
 
 
-  - name: copy expese conf
+  - name: copy expense conf #copy only works for files without variables
     ansible.builtin.copy:
-      src: expense.conf
+      src: expense.conf.j2
       dest: /etc/nginx/default.d/expense.conf 
 
   - name: restart nginx
