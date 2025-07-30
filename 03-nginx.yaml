@@ -3,8 +3,6 @@
   #hosts: all
   become: yes #take sudo access
   serial: 3
-  vars_files: 
-  - /var/expense/credentials_mysql.yaml
   tasks:
     - name: install nginx
       ansible.builtin.package: #heterogenous module that can work for all distros
